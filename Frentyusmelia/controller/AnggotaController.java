@@ -64,7 +64,7 @@ public class AnggotaController {
         DefaultTableModel tabelModel = 
                 (DefaultTableModel) formAnggota.getTblAnggota().getModel();
         tabelModel.setRowCount(0);
-        java.util.List<Anggota> list = anggotaDao.gelAll();
+        java.util.List<Anggota> list = anggotaDao.getAllAnggota();
         for(Anggota anggota : list){
             Object[] data = {
                 anggota.getNobp(),

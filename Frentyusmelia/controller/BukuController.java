@@ -31,7 +31,7 @@ public class BukuController {
     
     public void saveBuku(){
         buku = new Buku();
-        buku.setKodeBuku(formBuku.getTxtKodeBuku().getText());
+        buku.setKodebuku(formBuku.getTxtKodeBuku().getText());
         buku.setJudul(formBuku.getTxtJudul().getText());
         buku.setPengarang(formBuku.getTxtPengarang().getText());
         buku.setPenerbit(formBuku.getTxtPenerbit().getText());
@@ -43,7 +43,7 @@ public class BukuController {
         int index = formBuku.getTblBuku().getSelectedRow();
         buku = bukuDao.getBuku(index);
         if(buku != null){
-            formBuku.getTxtKodeBuku().setText(buku.getKodeBuku());
+            formBuku.getTxtKodeBuku().setText(buku.getKodebuku());
             formBuku.getTxtJudul().setText(buku.getJudul());
             formBuku.getTxtPengarang().setText(buku.getPengarang());
             formBuku.getTxtPenerbit().setText(buku.getPenerbit());
@@ -52,7 +52,7 @@ public class BukuController {
     
     public void updateBuku(){
         int index = formBuku.getTblBuku().getSelectedRow();
-        buku.setKodeBuku(formBuku.getTxtKodeBuku().getText());
+        buku.setKodebuku(formBuku.getTxtKodeBuku().getText());
         buku.setJudul(formBuku.getTxtJudul().getText());
         buku.setPengarang(formBuku.getTxtPengarang().getText());
         buku.setPenerbit(formBuku.getTxtPenerbit().getText());
@@ -69,10 +69,10 @@ public class BukuController {
         DefaultTableModel tabelModel = 
                 (DefaultTableModel) formBuku.getTblBuku().getModel();
         tabelModel.setRowCount(0);
-        java.util.List<Buku> list = bukuDao.gelAll();
+        java.util.List<Buku> list = bukuDao.getAllBuku();
         for(Buku buku : list){
             Object[] data = {
-                buku.getKodeBuku(),
+                buku.getKodebuku(),
                 buku.getJudul(),
                 buku.getPengarang(),
                 buku.getPenerbit(),
