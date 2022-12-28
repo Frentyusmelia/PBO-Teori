@@ -13,6 +13,14 @@ import java.util.List;
  */
 public class BukuDaoImpl implements BukuDao{
     List<Buku> data = new ArrayList<>();
+
+    public BukuDaoImpl() {
+        data.add(new Buku("B001", "Pascal", "Frenty", "Frenty"));
+        data.add(new Buku("B002", "Algoritma", "Winni", "Winni"));
+        data.add(new Buku("B003", "Java", "Anggun", "Anggun"));
+    }
+    
+    
     public void save(Buku buku){
         data.add(buku);
     }
@@ -25,7 +33,7 @@ public class BukuDaoImpl implements BukuDao{
     public Buku getBuku(int index){
         return data.get(index);
     }
-    public List<Buku> gelAll(){
+    public List<Buku> getAllBuku(){
         return data;
     }
 }

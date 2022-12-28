@@ -10,10 +10,10 @@ import java.util.List;
  *
  * @author ACER
  */
-public interface BukuDao {
-    void save(Buku buku);
-    void update(int index, Buku buku);
+public interface PeminjamanDao {
+    void save(Peminjaman peminjaman);
+    void update(int index, Peminjaman peminjaman);
     void delete (int index);
-    Buku getBuku(int index);
-    List<Buku> getAllBuku();
+    Peminjaman getPeminjaman(int index);
+    List<Peminjaman> getAllPeminjaman();
 }

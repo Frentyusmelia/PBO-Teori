@@ -14,5 +14,5 @@ public interface AnggotaDao {
     void update(int index, Anggota anggota);
     void delete (int index);
     Anggota getAnggota(int index);
-    List<Anggota> gelAll();
+    List<Anggota> getAllAnggota();
 }
