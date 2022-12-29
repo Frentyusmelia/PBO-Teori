@@ -18,8 +18,8 @@ public class Person {
     */ 
     public Person(){ 
         System.out.println("Inside Person:Constructor"); 
-        name = ""; 
-        address = ""; 
+        name = "Anna"; 
+        address = "Padang"; 
     } 
      
     /** 
@@ -48,5 +48,9 @@ public class Person {
      
     public void setAddress( String add ){ 
         this.address = add; 
+    } 
+    
+    public static void main( String[] args){ 
+        Person p = new Person (); 
     } 
 }
