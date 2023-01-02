@@ -12,12 +12,11 @@ import java.util.List;
  * @author ACER
  */
 public class PeminjamanDaoImpl implements PeminjamanDao {
-    List<Peminjaman> data = new ArrayList<>();
+     List<Peminjaman> data = new ArrayList<>();
 
     public PeminjamanDaoImpl() {
-        
+        data.add(new Peminjaman("1111","B001","2023-01-01","2023-01-03"));
     }
-    
     
     public void save(Peminjaman peminjaman){
         data.add(peminjaman);
@@ -31,7 +30,8 @@ public class PeminjamanDaoImpl implements PeminjamanDao {
     public Peminjaman getPeminjaman(int index){
         return data.get(index);
     }
-    public List<Peminjaman> getAllPeminjaman(){
-        return data;
+    
+    public List<Peminjaman> getAllPeminjaman() {
+       return data;
     }
 }
